@@ -163,6 +163,8 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'Valloric/ListToggle'
 Plug 'udalov/kotlin-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'andymass/vim-matchup'
+Plug 'mbbill/undotree'
 
 call plug#end()
 
@@ -184,19 +186,22 @@ let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 let g:lt_height = 10
 
-nnoremap .c  :pclose<CR>
-nnoremap .nh :nohlsearch<CR>
+nnoremap ,c  :pclose<CR>
+nnoremap ,nh :nohlsearch<CR>
 
 " YouCompleteMe shortcuts
-nnoremap .f  :YcmCompleter FixIt<CR>
-nnoremap .d  :YcmCompleter GetDoc<CR>
-" nnoremap .rr :YcmCompleter RefactorRename<CR>
-nnoremap .t  :YcmCompleter GetType<CR>
-nnoremap .fm :YcmCompleter Format<CR>
-nnoremap .g  :YcmCompleter GoTo<CR>
-nnoremap .gf :YcmCompleter GoToDefinition<CR>
-nnoremap .gd :YcmCompleter GoToDeclaration<CR>
-nnoremap .rf :YcmCompleter GoToReferences<CR>
+nnoremap ,f  :YcmCompleter FixIt<CR>
+nnoremap ,d  :YcmCompleter GetDoc<CR>
+nnoremap ,t  :YcmCompleter GetType<CR>
+nnoremap ,fm :YcmCompleter Format<CR>
+nnoremap ,g  :YcmCompleter GoTo<CR>
+nnoremap ,gf :YcmCompleter GoToDefinition<CR>
+nnoremap ,gd :YcmCompleter GoToDeclaration<CR>
+nnoremap ,rf :YcmCompleter GoToReferences<CR>
+cnoremap rr YcmCompleter RefactorRename
+
+" undotree shortcuts
+nnoremap \u  :UndotreeToggle<CR>
 
 set iskeyword-=_
 set hlsearch
