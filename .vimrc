@@ -110,6 +110,8 @@ if has("autocmd")
   autocmd FileType typescript setlocal shiftwidth=4 tabstop=4
   autocmd FileType java setlocal shiftwidth=4 tabstop=4
   autocmd FileType go setlocal shiftwidth=4 tabstop=4
+  autocmd FileType json setlocal shiftwidth=4 tabstop=4
+  autocmd FileType typescriptreact setlocal shiftwidth=4 tabstop=4
 
   " Put these in an autocmd group, so that you can revert them with:
   " ":augroup vimStartup | au! | augroup END"
@@ -127,7 +129,20 @@ if has("autocmd")
 
   augroup END
 
+  "augroup matchup_matchparen_highlight
+	"autocmd!
+
+	"autocmd ColorScheme * hi MatchParen guibg=gray ctermbg=gray
+	"autocmd ColorScheme * hi MatchWord guibg=gray ctermbg=gray
+  "augroup END
+
 endif " has("autocmd")
+
+" modify the matching colorscheme
+hi MatchParen guibg=gray ctermbg=gray
+hi MatchWord guibg=gray ctermbg=gray
+hi MatchParenCur guibg=gray ctermbg=gray gui=underline cterm=underline
+hi MatchWordCur guibg=gray ctermbg=gray gui=bold cterm=bold
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
