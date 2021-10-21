@@ -217,7 +217,7 @@ nnoremap ,g  :YcmCompleter GoTo<CR>
 nnoremap ,gf :YcmCompleter GoToDefinition<CR>
 nnoremap ,gd :YcmCompleter GoToDeclaration<CR>
 nnoremap ,rf :YcmCompleter GoToReferences<CR>
-cnoremap rr YcmCompleter RefactorRename
+cnoremap ycmrr YcmCompleter RefactorRename
 
 " undotree shortcuts
 nnoremap \u  :UndotreeToggle<CR>
